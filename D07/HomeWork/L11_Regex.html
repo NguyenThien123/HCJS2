@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <script>
+        var phonePattern = /^\d{3}-\d{5,7}$/;
+        var phonecode = phonePattern.exec(prompt("Enter Phone Code: "));
+        if(phonecode != null){
+            alert("Valid Phone Code.");
+        }
+        else{
+            alert("Invalid Phone Code - Format xxx-xxxxxx");
+        }
+    </script>
+</body>
+</html>
