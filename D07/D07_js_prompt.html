@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="../CSS/D05_page.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+</head>
+<body>
+    <h2>javascript prompt() Demo</h2>
+    <hr>
+    <button id="btnClickMe">Click Me</button>
+<p id="greeting"></p>
+
+</body>
+<script>
+    document.getElementById("btnClickMe").onclick = function(){
+     let kq= prompt("Enter your name: ")  
+   //kq = chuoi duoc nhap trong o text, neu visitor chon [ok] nguoc lai kq= null
+    // console.log("kq =" + kq);
+    let s=""
+    if(kq==null || kq.trim().length==0){
+        s = "Hi,<b><i> Stranger </i></b>";
+    }
+    else{
+        s = "Hi, Mr/Ms. " + kq + " How are you today?";
+    }
+    document.getElementById("greeting").innerText = s; 
+
+    }
+</script>
+</html>

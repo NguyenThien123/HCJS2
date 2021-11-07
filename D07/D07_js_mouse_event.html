@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <link rel="stylesheet" href="../CSS/D05_page.css">
+    <style>
+        #hinh{
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mouse event Demo</h2>
+    <hr>
+    <img src="../images/SwitzerLand.png" alt="" id="hinh" title="Let go to Switzerland">
+</body>
+
+<script>
+    document.getElementById("hinh").onmouseenter= function(){
+        this.src="../images/Vietnam.png";
+    }
+    document.getElementById("hinh").onmouseout=function(){
+        this.src="/images/SwitzerLand.png";
+    }
+</script>
+</html>
