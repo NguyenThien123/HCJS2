@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter number: ", "100"));
+        var ngto = 1;
+        for (var i = 2; i <= n/2; i++){
+            if(n % i == 0){
+                ngto = 0;
+                break;
+            }
+        }
+        if (ngto == 1){
+            alert(n + " is a Prime Number");
+        }
+        else{
+            alert(n + " is not a Prime number");
+        }
+    </script>
+</body>
+</html>

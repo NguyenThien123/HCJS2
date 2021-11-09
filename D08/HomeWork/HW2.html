@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <div id='result'></div>
+    <script>
+        window.onload=function(){
+        let ds=['thien','nhi','hoang','anh','duc','vuong','giang','tam','hung','hai'];
+
+        let s = [`<h3>Danh sach hoc sinh</h3>`];
+        s.push(`<ul>`)
+
+        for (const i in ds) {
+            s.push(`<li> ${ds[i]} </li>`);
+        }
+        s.push(`</ul>`);
+
+        
+        document.getElementById('result').innerHTML = s.sort().join("");
+    }
+        </script>
+</body>
+</html>
