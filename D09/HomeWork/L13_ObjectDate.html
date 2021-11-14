@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<script>
+    function calc_yourAge(){
+        var text_dob = document.getElementById("dob").value;
+        var bd = new Date(text_dob);
+        var year_bd = bd.getFullYear();
+
+        var today = new Date();
+        var year_today = today.getFullYear();
+        var age = year_today - year_bd;
+        alert("You are " + age + " years old!");
+    }
+</script>
+<body>
+    <h2>Date object demo</h2>
+    <hr>
+    Enter your birthday: 
+    <input type="date" value="2003-03-29"
+    name="dob" id="dob"><br>
+
+    <input type="button" value="Go"
+    id="btGo" name="btGo" onclick="calc_yourAge()">
+    <br>
+</body>
+</html>

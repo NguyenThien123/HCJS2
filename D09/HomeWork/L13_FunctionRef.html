@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+    <script>
+        var names = ['Mai','Huy','Thinh'];
+        function change_names(names){
+            names[0] = 'Thanh Mai';
+        }
+        function display_names(){
+            document.write("<pre>")
+                document.write('<h3>List of Student Names: </h3>');
+                document.writeln(names.join(", "));
+
+                change_names(names);
+
+                document.write('<h3>List of Changed Students Names: </h3>');
+                document.writeln(names.join(", "));
+                document.write('</pre>');
+        }
+        display_names(names);
+    </script>
+</body>
+</html>

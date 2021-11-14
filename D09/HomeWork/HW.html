@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="D05_page.css">
+    
+</head>
+<script>
+    document.getElementById("btgo").onclick = function(e){
+        e.preventDefault();
+
+        let rnum = Math.random();
+        let rnum_1_20 = 1 + Math.round(rnum*20);
+
+        let a = [];
+        a.push(`- So ngau nhien tu [1,20] = ${rnum_1_20}`);
+
+        document.getElementById("text1").value = a.join("\n");
+    }
+</script>
+<body>
+    <form action="" id="Start_count">
+    <center><h3><b>Counting</b></h3></center>
+    <center><Button type="button" id="btgo">Start Counting</Button></center><br>
+    <center><textarea name="text1" id="text1" cols="25" rows="10" readonly></textarea></center>
+<center>How many?<textarea name="text2" id="text2" cols="30" rows="1"></textarea> <button type="button">Check</button></center><br>
+<center><textarea name="text3" id="text3" cols="50" rows="1"></textarea></center><br>
+<center>
+    You have<textarea name="text4" id="text4" cols="7" rows="2"></textarea>
+    correct and<textarea name="text5" id="text5" cols="7" rows="2"></textarea>
+    incorrect. This is<textarea name="text6" id="text6" cols="7" rows="2"></textarea>percent correct.
+</center>
+
+
+
+</form>
+</body>
+</html>

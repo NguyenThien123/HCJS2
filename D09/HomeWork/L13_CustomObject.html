@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<script>
+    function Rectangle(width, height ){
+        this.w = width;
+        this.h = height;
+        this.area = function(){
+            var s = "width = " + this.w + "\n";
+                s += ("height = " + this.h + "\n");
+                s += (">> area = " + (this.w * this.h) );
+                alert(s);            
+        }
+    }
+    var x = prompt('Enter width of retangle: ', '7');
+    var y = prompt('Enter height of retangle: ', '5');
+    
+    var rect = new Rectangle(x,y);
+    rect.area();
+</script>
+<body>
+    
+</body>
+</html>
