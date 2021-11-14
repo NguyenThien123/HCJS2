@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("bv");
+        var context = canvas.getContext('2d');
+
+        var img = new Image();
+        img.onload = function(){
+            context.drawImage(img, 20, 40, 120, 100);
+        };
+        img.src = "rose.jpg";
+
+        context.font = "28pt Calibri";
+        context.linewidth = 2;
+        context.strokeStyle = "orange";
+        context.strokeText("ROSY", 90, 35);
+    }
+</script>
+<body>
+    <h2>Canvas Demo</h2>
+    <canvas id="bv" width="300" height="150">
+
+    </canvas>
+</body>
+</html>

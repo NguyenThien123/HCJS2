@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<script>
+    window.onload = function(){
+        var canvas = document.getElementById("bv");
+        var context = canvas.getContext('2d');
+
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+
+        context.beginPath();
+        context.arc(x, y, 30, 0, Math.PI * 2, false);
+        context.fillStyle = 'orange';
+        context.fill();
+
+        context.beginPath();
+        context.rect(x-100, y-50, 100, 50);
+        context.fillStyle = 'darkgreen';
+        context.globalAlpha=0.5;
+        context.fill();    
+        }
+</script>
+<body>
+    <h2>Canvas Demo</h2>
+    <canvas id="bv" width="300" height="150">
+        
+    </canvas>
+</body>
+</html>
