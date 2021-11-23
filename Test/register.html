@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        div a{
+    text-decoration: none;
+    color: white;
+
+        }
+    nav{
+    background-color: orange;
+    font-size: 20px;
+    }
+        
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    width: fit-content;
+    padding: 10px;
+
+}
+form label{
+    display: inline-block;
+    width: 10rem;
+}
+form div{
+    margin: .5rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo.PNG" alt="">
+    </header>
+    <div>
+        <nav>
+            <div class="menu">
+            <a href="home.html">Homepage</a>
+            <a href="#">Utilities</a>
+            <a href="#">Share</a>
+            <a href="#">Knowledge</a>
+            <a href="register.html">Register</a>
+            <a href="#">Login</a>
+            <a href="#">About Us</a>
+        </nav>
+        <br>
+    </div>
+    <form action="" id="form-register">
+        <div>
+            <label for="">First name:</label>
+            <input type="text" name="fname" id="fname" required>*
+        </div>
+        <div>
+            <label for="">Last name:</label>
+            <input type="text" name="lname" id="lname" required>*
+        </div>
+        <div>
+        <label for="">Country: </label>
+        <select name="country" id="country">
+            <option value="Viet Nam">Viet Nam</option>
+            <option value="Japan">Japan</option>
+            <option value="India">India</option>
+        </select>
+        </div>
+        <div>
+            <label for="">Gender</label>
+            <input type="radio" name="gender" id="gender_male" value="male" checked> Male
+            <input type="radio" name="gender" id="gender_female" value="female"> Female
+           </div>
+           <div>
+               <label for="">Email:</label>
+               <input type="email" name="email" id="email" required>*
+           </div>
+           <div>
+               <label for="">Telephone:</label>
+               <input type="tel" name="tel" id="tel" required minlength="8" max="12">*
+           </div>
+           <input type="submit" value="Register">
+           <input type="reset" value="Reset">
+    </form>
+</body>
+<script>
+    document.getElementById("form-register").onsubmit=function(){
+
+  var fname = document.getElementById('fname').value;
+  var lname = document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var tel = document.getElementById("tel").value;
+  if(fname==" "){
+      alert("The First name cannot left blank!");
+      document.getElementById("fname").focus();
+      return false;
+  }
+if(lname==" "){
+      alert("The Last name cannot left blank!");
+      document.getElementById("lname").focus();
+      return false;
+if(email==" "){
+      alert("Email cannot left blank!");
+      document.getElementById("email").focus();
+      return false;
+      }
+if(tel==" "){
+      alert("Telephone cannot left blank!");
+      document.getElementById("telephone").focus();
+      return false;
+      }
+}
+}
+else{
+    alert("Congratulation Your information has been sent successfully");
+}
+</script>
+</html>
